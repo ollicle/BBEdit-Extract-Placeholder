@@ -1,6 +1,6 @@
 (* Extract BBEdit placeholder
  * A key press minimising script to extract and apply text from BBEdit Clippings placeholders.
- * Version 0.0.1
+ * Version 0.0.2
  * Oliver Boermans
  * http://www.ollicle.com/
  * @ollicle
@@ -27,7 +27,10 @@ tell application "BBEdit" to tell front window
 	set placeholderContent to ""
 
 	-- Divides the content of the placeholder into replacement options
-	set optionDelimiter to {"| |"}
+	set defaultOptionDelimiter to {"|"}
+
+	-- Divides the placeholder with a custom specified
+	set customDelimiterDelimiter to "=|="
 
 	-- The text to replace the selected text with
 	set replacement to ""
@@ -49,6 +52,53 @@ tell application "BBEdit" to tell front window
 
 		-- No placeholder found - use the whole selection
 		set placeholderContent to selectedText as string
+
+	end if
+
+	-- Determine delimiter
+	set AppleScript's text item delimiters to customDelimiterDelimiter
+	set customDelimiterSplit to text items of placeholderContent
+
+	-- Restore default
+	set AppleScript's text item delimiters to {""}
+
+	set delimiterSplitCount to count of customDelimiterSplit
+
+	if (delimiterSplitCount is greater than 1) and (first item of customDelimiterSplit is not equal to "") then
+
+		set optionDelimiter to first item of customDelimiterSplit
+
+		-- Only one instance of customDelimiterDelimiter (as expected)
+		if delimiterSplitCount is equal to 2 then
+
+			set placeholderContent to last item of customDelimiterSplit
+
+		else
+
+			-- Oops an unintended delimiter - let’s not omit it
+			set countOfCharsToTrim to (length of optionDelimiter) + (length of customDelimiterDelimiter) + 1
+			set contentLength to length of placeholderContent
+			set placeholderContent to text countOfCharsToTrim thru contentLength of placeholderContent
+
+		end if
+
+	else if first item of customDelimiterSplit is equal to "" then
+
+		-- Empty custom delimiter - do not split into options
+		-- Use whole placeholder omitting the first customDelimiterDelimiter
+
+		set countOfCharsToTrim to (length of customDelimiterDelimiter) + 1
+		set contentLength to length of placeholderContent
+		set replacement to text countOfCharsToTrim thru contentLength of placeholderContent
+
+		set selection to replacement
+
+		-- We’re done!
+		return
+
+	else
+
+		set optionDelimiter to first item of defaultOptionDelimiter
 
 	end if
 
