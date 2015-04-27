@@ -46,39 +46,39 @@ Wouldn’t it be nice if my template could store an alternative. Perhaps somethi
 
 With this placeholder selected evoking the script pops a dialog from which my the appropriate option may be chosen and entered in a snap.
 
-If three of more options are provided the first is used as a Label in the dialog:
+## Keep the label
+
+Although removing the placeholder label `sign off` is no great loss in this particular example, it is easy to imagine scenarios where it would help to indicate the purpose of placeholder. By default the option dialog uses the label “Options”. To customise this designate the first option in the placeholder as the label by prefixing it with a delimiter:
 
 	--
-	<#Sign off|Yours sincerely|Yours faithfully|Cheers|Love#>
+	<#|Sign off|Yours sincerely|Yours faithfully|Cheers|Love#>
 	Oliver Boermans
 
-To use the default “Options” make the delimiter the first character:
-
-	--
-	<#|Yours sincerely|Yours faithfully|Cheers|Love#>
-	Oliver Boermans
+[Insert screenshot]
 
 ## Setting a custom option delimiter
 
-To use an alternative delimiter (perhaps to use “|” in your output) specify one by placing the desired character or characters at the very start separating it from the placeholder content with:
+[this is not a pipe image]
+
+To use an alternative delimiter (perhaps to use a pipe `|` in your output) specify one by placing the desired character or characters at the very start of the placeholder – separating it from the placeholder options (and custom label if specified) with:
 
 	=|=
 
 For example to use “$” as a delimiter:
 
 	--
-	<#$=|=Sign off$Yours sincerely$Yours faithfully$Cheers$Love#>
+	<#$=|=Yours sincerely$Yours faithfully$Cheers$Love#>
 	Oliver Boermans
 
-Or a comma “,”
+Or a comma “,” and a custom label
 
-	<#,=|=Sign off,Yours sincerely,Yours faithfully,Cheers,Love#>
+	<#,=|=,Sign off,Yours sincerely,Yours faithfully,Cheers,Love#>
 	Oliver Boermans
 
 
 ## No delimiter, no!
 
-If nothing precedes the custom delimiter delimiter, the script presumes you don’t want one:
+If nothing precedes the custom delimiter delimiter, the script presumes you don’t want to delimit:
 
 	--
 	<#=|=Yours sincerely | Yours faithfully | Cheers | Love#>
