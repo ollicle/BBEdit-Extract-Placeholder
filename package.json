@@ -1,0 +1,23 @@
+{
+  "name": "BBEdit-Extract-Placeholder",
+  "version": "1.0.0",
+  "description": "AppleScript to extract replacement options from placeholder label text.",
+  "main": "BBEdit-Extract-Placeholder/Contents/Scripts/Extract placeholder.scpt",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://ollicle@github.com/ollicle/BBEdit-Extract-Placeholder.git"
+  },
+  "keywords": [
+    "bbedit",
+    "applescript"
+  ],
+  "author": "Oliver Boermans",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ollicle/BBEdit-Extract-Placeholder/issues"
+  },
+  "homepage": "https://github.com/ollicle/BBEdit-Extract-Placeholder"
+}
