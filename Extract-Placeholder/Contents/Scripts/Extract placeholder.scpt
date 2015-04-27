@@ -1,6 +1,6 @@
 (* Extract BBEdit placeholder
  * A key press minimising script to extract and apply text from BBEdit Clippings placeholders.
- * Version 0.0.2
+ * Version 0.0.3
  * Oliver Boermans
  * http://www.ollicle.com/
  * @ollicle
@@ -36,7 +36,7 @@ tell application "BBEdit" to tell front window
 	set replacement to ""
 
 	-- Derived label for the presented options
-	set promptKey to ""
+	set promptText to ""
 
 	-- Default label for the presented options until a means to extract one is coded
 	set defaultKey to "Options"
@@ -119,18 +119,20 @@ tell application "BBEdit" to tell front window
 	else
 
 		-- Extract options and promptText
-		if numOptions is greater than 2 then
 
-			set promptText to first item of foundOptions
+		if first item of foundOptions is equal to "" then
 
-			--	Use default if first option is empty
+			-- Empty first option indicates a custom label follows
+			set promptText to item 2 of foundOptions
+
+			--	Use default if the following option is empty
 			if promptText is equal to "" then
 
 				set promptText to defaultKey
 
 			end if
 
-			set optList to rest of every item of foundOptions
+			set optList to items 3 thru numOptions of foundOptions
 
 		else
 
