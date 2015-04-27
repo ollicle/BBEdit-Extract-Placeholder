@@ -1,6 +1,6 @@
 # BBEdit Extract Placeholder
 
-The contained AppleScript `Extract placeholder.scpt` augments BBEdit’s placeholders by reducing the work required to keep the text included as the placeholder label.
+The contained AppleScript `Extract placeholder.scpt` augments [BBEdit](http://www.barebones.com/products/bbedit/)’s placeholders by reducing the work required to keep the text included as the placeholder label.
 
 ## BBEdit placeholders
 
