@@ -4,7 +4,7 @@ The contained AppleScript `Extract placeholder.scpt` augments [BBEdit](http://ww
 
 ## BBEdit placeholders
 
-A BBEdit placeholder is a portion of text prefixed with `<#` and suffixed with `#>`, e.g. `<#example#>`. Striking TAB on your keyboard when a placeholder is present cause it to be selected – greatly reducing the time and effort to find and edit these portions of the document. Tabbing through the document will highlight each placeholder ready to be replaced when one starts typing.
+A BBEdit placeholder is a portion of text prefixed with `<#` and suffixed with `#>`, e.g. `<#example#>`. Striking TAB on your keyboard when a placeholder is present causes the pointy brackets and their contents to be selected – greatly reducing the time and effort to find and edit these portions of the document. Tabbing through the document will highlight each placeholder ready to be replaced when one starts typing.
 
 ## Why this script
 
@@ -72,7 +72,7 @@ Or a comma “,” and a custom label
 	Oliver Boermans
 
 
-## No delimiter, no!
+## No delimits
 
 If nothing precedes the custom delimiter delimiter, the script presumes you don’t want to delimit:
 
@@ -85,6 +85,17 @@ Inserting the whole placeholder text following the custom delimiter delimiter:
 	--
 	Yours sincerely | Yours faithfully | Cheers | Love
 	Oliver Boermans
+
+
+## No placeholders
+
+Upon executing the script, if a BBEdit placeholder is not found within the selection, the extent of selection is used in its place.
+
+## Placeholder convention
+
+In summary this is the expected pattern – brackets indicate optional elements:
+
+	`[<#[*]][CUSTOM_DELIMITER][=|=][|CUSTOM_LABEL|]replacement option[|additional replacement options][#>]`
 
 
 ## Does everything work?
