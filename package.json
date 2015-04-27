@@ -1,7 +1,7 @@
 {
   "name": "BBEdit-Extract-Placeholder",
   "version": "1.0.0",
-  "description": "AppleScript to extract replacement options from placeholder label text.",
+  "description": "A key press minimising script to extract and apply text from BBEdit Clippings placeholders.",
   "main": "BBEdit-Extract-Placeholder/Contents/Scripts/Extract placeholder.scpt",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

@@ -1,8 +1,7 @@
 (* Extract BBEdit placeholder
  * A key press minimising script to extract and apply text from BBEdit Clippings placeholders.
- * Version 0.0.3
+ * https://github.com/ollicle/BBEdit-Extract-Placeholder
  * Oliver Boermans
- * http://www.ollicle.com/
  * @ollicle
  *)
 
