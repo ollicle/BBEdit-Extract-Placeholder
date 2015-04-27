@@ -54,11 +54,7 @@ Although removing the placeholder label `sign off` is no great loss in this part
 	<#|Sign off|Yours sincerely|Yours faithfully|Cheers|Love#>
 	Oliver Boermans
 
-[Insert screenshot]
-
 ## Setting a custom option delimiter
-
-[this is not a pipe image]
 
 To use an alternative delimiter (perhaps to use a pipe `|` in your output) specify one by placing the desired character or characters at the very start of the placeholder – separating it from the placeholder options (and custom label if specified) with:
 
@@ -96,7 +92,6 @@ Inserting the whole placeholder text following the custom delimiter delimiter:
 - Line breaks within placeholders are not handled well. For more complex options I suggest creating a Clipping for the purpose.
 
 - Only tested with BBEdit 11
-
 
 
 ## Installation
