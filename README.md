@@ -105,5 +105,5 @@ Rename the "Extract-Placeholder" directory to "Extract-Placeholder.bbpackage"
 
 Double click it. BBEdit will copy it to the Packages directory of your BBEdit application support directory.
 
-Invoke the script "Extract placeholder" from BBEdit’s Scripts Menu or ideally assign a keyboard short cut or your choosing.
+Invoke the script "Extract placeholder" from BBEdit’s Scripts Menu or ideally assign a keyboard short cut of your choosing.
 
