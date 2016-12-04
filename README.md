@@ -107,9 +107,23 @@ In summary this is the expected pattern – brackets indicate optional elements:
 
 ## Installation
 
-Rename the "Extract-Placeholder" directory to "Extract-Placeholder.bbpackage"
+1. Download and unzip the package: Extract-Placeholder.bbpackage_v1.0.0.zip
+2. Double–click the Extract-Placeholder.bbpackage, BBEdit will prompt you to install (or update), and restart.
 
-Double click it. BBEdit will copy it to the Packages directory of your BBEdit application support directory.
+The package file will be copied to the Packages directory in BBEdit’s Application Support directory. Delete it from here should you wish uninstall later.
+
+
+## Usage
 
 Invoke the script "Extract placeholder" from BBEdit’s Scripts Menu or ideally assign a keyboard short cut of your choosing.
 
+## Building the package
+
+In your Terminal:
+
+	cd BBEdit-ESLint/
+	make
+
+to also install the fresh build:
+
+	make install
