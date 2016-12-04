@@ -107,7 +107,7 @@ In summary this is the expected pattern – brackets indicate optional elements:
 
 ## Installation
 
-1. Download and unzip the package: Extract-Placeholder.bbpackage_v1.0.0.zip
+1. Download and unzip the package: [Extract-Placeholder.bbpackage_v1.0.0.zip](https://github.com/ollicle/BBEdit-Extract-Placeholder/raw/master/dist/Extract-Placeholder.bbpackage_v1.0.0.zip)
 2. Double–click the Extract-Placeholder.bbpackage, BBEdit will prompt you to install (or update), and restart.
 
 The package file will be copied to the Packages directory in BBEdit’s Application Support directory. Delete it from here should you wish uninstall later.
